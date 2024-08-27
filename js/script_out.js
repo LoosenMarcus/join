@@ -1,15 +1,5 @@
 /**
- * this function is loading onload and start the included functions
- */
-async function init() {
-  await includeHTML();
-  await loadUsers();
-  loadCurrentUser();
-  loadInitials();
-}
-
-/**
- * html code is being included
+ * insert HTML code
  */
 async function includeHTML() {
   let includeElements = document.querySelectorAll("[w3-include-html]");
@@ -29,5 +19,4 @@ async function includeHTML() {
       element.innerHTML = "Error loading the page.";
     }
   }
-  changeMenuLinkBgColor();
 }
